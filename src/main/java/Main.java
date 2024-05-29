@@ -10,7 +10,7 @@ import paymentMethodInterface.PaymentCallback;
 public class Main {
     public static void main(String[] args) {
         PaymentGateway paymentGateway = new PaymentGateway();
-        PaymentCallback callback = new MyPaymentCallback(); // Assuming MyPaymentCallback implements PaymentCallback
+        PaymentCallback callback = new MyPaymentCallback();
 
         // Set callback before processing payments
         paymentGateway.setCallback(callback);

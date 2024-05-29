@@ -23,8 +23,4 @@ public class CreditCardPayment implements PaymentMethod {
      callback.onPaymentCompleted(success);
 
     }
-
-
-
-
 }

@@ -13,7 +13,7 @@ public class PaypalMethod implements PaymentMethod {
     @Override
     public void processPayment(double amount, PaymentCallback callback) {
         System.out.println("Payment with Paypal of " + amount + " €" + " in progress");
-        boolean success = true;
+        boolean success = false;
         callback.onPaymentCompleted(success);
     }
 }
