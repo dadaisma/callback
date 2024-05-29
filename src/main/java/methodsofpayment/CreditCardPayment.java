@@ -1,5 +1,6 @@
 package methodsofpayment;
 
+import paymentMethodInterface.PaymentCallback;
 import paymentMethodInterface.PaymentMethod;
 
 public class CreditCardPayment implements PaymentMethod {
@@ -16,7 +17,12 @@ public class CreditCardPayment implements PaymentMethod {
     }
 
     @Override
-    public void processPayment(double amount) {
+    public void processPayment(double amount, PaymentCallback callback) {
         System.out.println("Payment with CreditCard of " + amount + " €" + " in progress");
+        boolean success = true;
+        callback.onPaymentCompleted(success);
+
     }
+
+
 }
