@@ -17,12 +17,14 @@ public class CreditCardPayment implements PaymentMethod {
     }
 
     @Override
-    public void processPayment(double amount, PaymentCallback callback) {
-        System.out.println("Payment with CreditCard of " + amount + " €" + " in progress");
-        boolean success = true;
-        callback.onPaymentCompleted(success);
+     public void processPayment(double amount, PaymentCallback callback) {
+       System.out.println("Payment with CreditCard of " + amount + " €" + " in progress");
+       boolean success = true;
+     callback.onPaymentCompleted(success);
 
     }
+
+
 
 
 }

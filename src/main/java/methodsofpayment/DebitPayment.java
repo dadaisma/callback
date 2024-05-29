@@ -1,5 +1,6 @@
 package methodsofpayment;
 
+import paymentMethodInterface.PaymentCallback;
 import paymentMethodInterface.PaymentMethod;
 
 public class DebitPayment implements PaymentMethod {
@@ -15,7 +16,9 @@ public class DebitPayment implements PaymentMethod {
     }
 
     @Override
-    public void processPayment(double amount) {
+    public void processPayment(double amount, PaymentCallback callback) {
         System.out.println("Payment with DebitCard of " + amount + " €" + " in progress");
+        boolean success = true;
+        callback.onPaymentCompleted(success);
     }
 }

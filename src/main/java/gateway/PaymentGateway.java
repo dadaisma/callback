@@ -12,6 +12,6 @@ public class PaymentGateway {
     }
 
     public void processPayment(PaymentMethod paymentMethod, double amount) {
-        paymentMethod.processPayment(amount, callback); // Use the member variable
+        paymentMethod.processPayment(amount, callback);
     }
 }
